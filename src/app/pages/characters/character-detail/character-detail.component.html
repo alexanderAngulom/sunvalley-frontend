@@ -1,1 +1,10 @@
-<p>character-detail works!</p>
+<div class="container">
+    <img src={{image}} alt="image">
+    <div class="container-text">
+        <h2>{{id}}<br></h2>
+        <p>{{name}}
+        </p>
+        <input type="text" placeholder="edit Name" [(ngModel)]="editedName">
+        <button type="submit" (click)="saveData()">EDIT NAME</button>
+    </div>
+</div>

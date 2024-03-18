@@ -1,20 +1,12 @@
-<div class="wrap animate pop" [routerLink]="['/character-details', character?.id]" >
-    <a ></a> 
-    <div class="overlay">
-        <div class="overlay-content animate slide-left delay-2">
-            <h1 class="animate slide-left pop delay-4">{{ character?.gender }}</h1>
-            <h1 class="animate slide-left pop delay-4">{{ character?.species }}</h1>
+ <main   (click)="navigateToSpecificRouteWithParams(character?.id,character?.image,character?.name)"  >
+    <div class="card">
+        <img [src]="character?.image" alt="Character Image">
+        <div class="card-content">
+            <p>
+                {{character?.name}},
+                {{ character?.origin?.name }}
+            </p>
         </div>
-        <div class="image-content animate slide delay-5" [style.backgroundImage]="'url(' + character?.image + ')'" ></div> 
-        <!--  -->
     </div>
-    <div class="text">
-        <p><img rel="reload" as="image" [src]="character?.image" [alt]="character?.name" class="inset" />
-            {{character?.name}}
-        </p>
-        <br>
-        <p>{{ character?.origin?.name }}</p>
-        
-    </div>
-</div>
+</main>
 

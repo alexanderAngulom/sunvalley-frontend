@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CharacterDetailRoutingModule } from './character-detail-routing.module';
 import { CharacterDetailComponent } from './character-detail.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { CharacterDetailComponent } from './character-detail.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     CharacterDetailRoutingModule
   ]
 })

@@ -50,11 +50,25 @@ export class DataService {
       take(1),
       tap(({ data }) => {
         const { characters, episodes } = data
-        console.log(characters.results);
-        
-      //  this.episodeSubject.next(episodes.results)
-        this.charactersSubject.next(characters.results)
+        //  this.episodeSubject.next(episodes.results)
+        let lastItemCharacter = localStorage.getItem('characterUpdate')
+        if (lastItemCharacter!=null) {
+          let responseCharacter = this.getDataUpdate(characters.results,JSON.parse(lastItemCharacter))
+          console.log(responseCharacter);
+          this.charactersSubject.next(responseCharacter)
+        }else{
+          this.charactersSubject.next(characters.results)
+
+        }
       })
     ).subscribe()
   }
+  private getDataUpdate(characters: any[], lastItemCharacter: any) {
+    const charactersCopy = [...characters]; 
+    const index = charactersCopy.findIndex((character: any) => character.id === lastItemCharacter.id);
+    console.log("getDataUpdate", index);
+    return characters;
+  }
+  
+  
 }
