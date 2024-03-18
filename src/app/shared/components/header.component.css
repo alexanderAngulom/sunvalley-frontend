@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700&display=swap');
+
+body {
+  font-family: 'Libre Caslon Text', serif;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.body-text {
+  padding-top: 20vh;
+  text-align: center;
+}
+
+.menu-pane {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0; /* Cambiado a 'right' */
+  width: 25vw;
+  height: 100vh;
+  transform: translateX(105vw); /* Cambiado a 'translateX(105vw)' */
+  transition: 0.6s ease-in-out;
+  z-index: 100;
+  margin-top: 20px;
+  margin-right: 20px; /* Añadido margen derecho */
+}
+
+.menu-pane p {
+  color: black;
+  font-size: 0.6em;
+}
+
+.menu-pane nav {
+  padding: 10%;
+}
+
+.menu-links li,
+.menu-links a,
+.menu-links span {
+  transition: 0.5s ease-in-out;
+}
+
+.menu-pane ul {
+  padding: 10%;
+  display: inline-block;
+}
+
+.menu-pane li {
+  padding: 20px 0;
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+.menu-pane li:first-child {
+  font-size: 1.3em;
+  margin-left: -10px;
+}
+
+.menu-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-links li:hover a {
+  color: #ffffff;
+}
+
+.menu-links li:first-child:hover a {
+  color: black;
+  background-color: #ffffff;
+}
+
+#QC-info,
+#DC-info {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  display: block;
+  opacity: 0;
+}
+
+.menu-links li:first-child:hover #QC-info,
+.menu-links li:first-child:hover #DC-info {
+  opacity: 1;
+}
+
+.menu-links li:first-child a {
+  padding: 5px;
+}
+
+input.hamburger-checkbox {
+  position: absolute;
+  top: 5vh;
+  right: 5vw; /* Cambiado a 'right' */
+  width: 10vw;
+  opacity: 0;
+  height: 6vh;
+}
+
+.hamburger-icon {
+  position: absolute;
+  z-index: 101;
+  top: 5vh;
+  right: 5vw; /* Cambiado a 'right' */
+  padding-bottom: 2vh;
+}
+
+.hamburger-icon span {
+  height: 5px;
+  width: 40px;
+  background-color: black;
+  display: block;
+  margin: 5px 0;
+  transition: 0.7s ease-in-out;
+  transform: none;
+}
+
+#openmenu:checked ~ .menu-pane {
+  right: 0; /* Cambiado a 'right' */
+  transform: translateX(0); /* Cambiado a 'translateX(0)' */
+}
+
+#openmenu:checked ~ .body-text {
+  display: none;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
+  transform: translate(0%, 175%) rotate(-45deg);
+  background-color: white;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(3) {
+  transform: rotate(45deg);
+  background-color: white;
+}
+
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(1),
+#openmenu:checked ~ .hamburger-icon span:nth-of-type(4) {
+  opacity: 0;
+}

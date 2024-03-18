@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+html {
+  font-family: 'RocknRoll One', sans-serif;
+  background-color: #f0eeee;
+  scroll-behavior: smooth;
+}
