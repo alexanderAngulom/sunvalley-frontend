@@ -12,7 +12,7 @@ export class CharacterListComponent implements OnInit {
   constructor(private dataservice:DataService) { }
 
   ngOnInit(): void {
-    console.log(this.characters$);
+    
 
   }
 

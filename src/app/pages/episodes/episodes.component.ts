@@ -11,6 +11,8 @@ export class EpisodesComponent implements OnInit {
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
+    console.log("EpisodesComponent",this.episodes$);
+    
   }
 
 }

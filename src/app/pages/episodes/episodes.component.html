@@ -1,7 +1,7 @@
-<section class="container">
-    <ul class="episodes__list">
-        <li *ngFor="let episode of episodes$ | async; let i = index;" id="exampleElement">
-            {{ episode.episode }} - {{ episode.name }}
-        </li>
-    </ul>
-</section>
+<ol style="--length: 5" role="list" *ngFor="let episode of episodes$ | async; let i = index;">
+	<li style="--i: 8">
+		<h3>Episodio: {{ episode.name }}</h3>
+		<p>{{ episode.episode }}</p>
+	</li>
+	
+</ol>
