@@ -3,8 +3,8 @@ import {ApolloModule, APOLLO_OPTIONS} from 'apollo-angular';
 import {ApolloClientOptions, InMemoryCache} from '@apollo/client/core';
 import {HttpLink} from 'apollo-angular/http';
 
-//const uri = 'https://sunvalley-backend-default--production-alexanderangulom.sierranegra.cloud/graphql/rick-and-morty'; 
-const uri = 'http://localhost:3000/graphql/rick-and-morty'; 
+const uri = 'https://sunvalley-backend-default--production-alexanderangulom.sierranegra.cloud/graphql/rick-and-morty'; 
+//const uri = 'http://localhost:3000/graphql/rick-and-morty'; 
 
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   return {
