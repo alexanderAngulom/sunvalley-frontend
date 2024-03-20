@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderModule } from '@app/shared/components/header.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {  MatDialogModule } from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { HeaderModule } from '@app/shared/components/header.module';
     AppRoutingModule,
     GraphQLModule,
     HttpClientModule,
-    HeaderModule
+    HeaderModule,
+    MatDialogModule,
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

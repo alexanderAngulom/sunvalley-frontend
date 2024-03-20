@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CharacterDetailRoutingModule } from './character-detail-routing.module';
 import { CharacterDetailComponent } from './character-detail.component';
 import { FormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
+    MatProgressSpinnerModule,
     CharacterDetailRoutingModule
   ]
 })

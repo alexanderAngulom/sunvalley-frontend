@@ -5,6 +5,10 @@
         <p>{{name}}
         </p>
         <input type="text" placeholder="edit Name" [(ngModel)]="editedName">
-        <button type="submit" (click)="saveData()">EDIT NAME</button>
+        <button type="submit" (click)="saveData()" [disabled]="buttonDisabled">
+            <span *ngIf="loading">Loading...</span>
+            <span *ngIf="!loading">Edit Name</span>
+            <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
+        </button>
     </div>
 </div>

@@ -18,18 +18,14 @@ export class CharactersCardComponent implements OnInit {
   }
 
   navigateToSpecificRouteWithParams(id:any,imagen:any,name:any): void {
-    // Especifica la ruta a la que quieres navegar
     const ruta = '/character-detail';
 
-    // Crea un objeto con los parámetros que deseas pasar
     const params = {
       idC: id,
       imagenC: imagen,
       nameC: name
-      // Agrega todos los parámetros que desees pasar
     };
 
-    // Llama al método navigate del Router y pasa la ruta y los parámetros
     this.router.navigate([ruta], { queryParams: params });
   }
 
